@@ -73,6 +73,7 @@ import moment from "moment";
 import axios from "axios";
 import html from "@/assets/html-5.png";
 import js from "@/assets/js.png";
+import vue from "@/assets/logo.png";
 
 export default {
   props: ["avatar"],
@@ -82,6 +83,7 @@ export default {
       datas: [],
       html,
       js,
+      vue,
       loader: true,
       message: "Fetching from GitHub"
     };
@@ -100,7 +102,7 @@ export default {
         let lowercase = lang.toLowerCase();
         if (lowercase === "html") return html;
         if (lowercase === "javascript") return js;
-        if (lang == null) return js;
+        if(lowercase === 'vue') return vue
       }
     },
     moment(date) {
