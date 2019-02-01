@@ -52,8 +52,8 @@
                         <div class="caption mb-2">{{data.language}}</div>
                       </v-flex>
                       <v-flex class="mx-4">
-                        <v-avatar color="grey lighten-4">
-                          <img :src="icons(data.language)">
+                        <v-avatar color="blue-grey darken-4">
+                          <img class="icon" :src="icons(data.language)">
                         </v-avatar>
                       </v-flex>
                     </v-layout>
@@ -73,7 +73,7 @@ import moment from "moment";
 import axios from "axios";
 import html from "@/assets/html-5.png";
 import js from "@/assets/js.png";
-import vue from "@/assets/logo.png";
+import vue from "@/assets/vue.png";
 
 export default {
   props: ["avatar"],
@@ -102,7 +102,7 @@ export default {
         let lowercase = lang.toLowerCase();
         if (lowercase === "html") return html;
         if (lowercase === "javascript") return js;
-        if(lowercase === 'vue') return vue
+        if (lowercase === "vue") return vue;
       }
     },
     moment(date) {
@@ -128,7 +128,8 @@ export default {
   object-fit: cover;
 }
 
-.icons {
+.icons,
+.icon {
   object-fit: cover;
 }
 
