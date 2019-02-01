@@ -92,7 +92,7 @@ export default {
     sort() {
       return this.datas
         .slice()
-        .sort((a, b) => (a.pushed_at > b.pushed_at ? 1 : -1));
+        .sort((a, b) => (a.pushed_at > b.pushed_at ? 1 : 1));
     }
   },
 

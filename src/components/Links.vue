@@ -101,9 +101,7 @@ export default {
     };
   },
   methods: {
-    submit() {
-      console.log(JSON.stringify(this.data));
-    }
+    submit() {}
   }
 };
 </script>
