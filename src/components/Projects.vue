@@ -11,7 +11,7 @@
           >{{message}}</v-progress-circular>
         </v-layout>
         <v-timeline class="pa-0">
-          <v-timeline-item v-for="(data,n) in datas" :key="n" large>
+          <v-timeline-item v-for="(data,n) in sort" :key="n" large>
             <v-avatar slot="icon">
               <img :src="avatar" class="avatar">
             </v-avatar>
@@ -87,6 +87,13 @@ export default {
       loader: true,
       message: "Fetching from GitHub"
     };
+  },
+  computed: {
+    sort() {
+      return this.datas
+        .slice()
+        .sort((a, b) => (a.pushed_at > b.pushed_at ? 1 : -1));
+    }
   },
 
   methods: {
